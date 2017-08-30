@@ -9,7 +9,7 @@
     <url>http://maven.apache.org</url>
     <dependencies>
 
-
+        <!--单元测试-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -18,8 +18,7 @@
         </dependency>
 
 
-        <!-- struts框架包开始  -->
-        <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
+        <!--struts2核心包-->
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-core</artifactId>
@@ -27,24 +26,21 @@
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/org.apache.struts.xwork/xwork-core -->
+        <!-- xwork核心包-->
         <dependency>
             <groupId>org.apache.struts.xwork</groupId>
             <artifactId>xwork-core</artifactId>
             <version>2.3.31</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-convention-plugin -->
+        <!--struts2-convention-plugin 包-->
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-convention-plugin</artifactId>
             <version>2.5.1</version>
         </dependency>
 
-        <!-- struts框架包结束  -->
 
-
-        <!-- Hibernate框架包开始 -->
         <!-- hibernate核心包 -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -52,7 +48,6 @@
             <version>3.6.0.Final</version>
         </dependency>
 
-        <!-- Hibernate框架包结束-->
 
         <!-- JDBC驱动包 -->
         <dependency>
@@ -62,37 +57,27 @@
         </dependency>
 
 
-        <!--spring框架包开始 -->
-        <!-- springORM包 -->
+        <!-- spring  ORM包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>4.1.1.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <!-- spring context包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>4.1.1.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <!-- spring core包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>4.1.1.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>4.1.1.RELEASE</version>
-        </dependency>
-
-
-        <!--spring框架包结束 -->
 
         <!-- struts与spring进行整合的包 -->
         <dependency>
@@ -102,10 +87,7 @@
         </dependency>
 
 
-
-
-
-        <!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+        <!--javassist包-->
         <dependency>
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
@@ -113,12 +95,30 @@
         </dependency>
 
 
+        <!-- spring aop依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>4.1.0.RELEASE</version>
+        </dependency>
+
+
+        <!-- spring aspects依赖 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>4.1.0.RELEASE</version>
+        </dependency>
+
+
     </dependencies>
     <build>
         <finalName>SSH</finalName>
         <resources>
+
+            <!--配置资源目录,编译时会把资源文件打包到class目录下-->
             <resource>
-                <directory>src/main/java</directory>
+                <directory>src/main/resources</directory>
                 <includes>
                     <include>**/*.xml</include>
                     <include>**/*.properties</include>

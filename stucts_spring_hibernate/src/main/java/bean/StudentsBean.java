@@ -1,9 +1,9 @@
 package bean;
-
+import java.io.Serializable;
 /**
  * Created by Administrator on 2017/6/6.
  */
-public class StudentsBean {
+public class StudentsBean implements Serializable {
 
     private int id;
     private String name;

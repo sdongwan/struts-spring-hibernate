@@ -15,21 +15,12 @@ public class HibernateUtil {
 
 
     public static Session openSession(SessionFactory sessionFactory1) {
-        if (sessionFactory == null) {
-            buildSessionFactory(sessionFactory1);
-        }
+        sessionFactory = sessionFactory1;
         session = sessionFactory.openSession();
         transaction = session.beginTransaction();
         return session;     //先开启一个事务
     }
 
-
-    public static SessionFactory buildSessionFactory(SessionFactory sessionFactory1) {
-        if (sessionFactory == null) {
-            sessionFactory = sessionFactory1;
-        }
-        return sessionFactory;
-    }
 
     public static void closeSession() {
         if (transaction != null) {
@@ -37,9 +28,6 @@ public class HibernateUtil {
         }
         if (session != null) {
             session.close();
-        }
-        if (sessionFactory != null) {
-            sessionFactory.close();
         }
     }
 
